@@ -6,6 +6,6 @@
     <list>
         <mapping class="com.example.nice.coolweather.shiti_class.City"/>
         <mapping class="com.example.nice.coolweather.shiti_class.County"/>
-        <mapping class="com.example.nice.coolweather.shiti_class.province"/>
+        <mapping class="com.example.nice.coolweather.shiti_class.Province"/>
     </list>
 </litepal>
