@@ -1,5 +1,6 @@
 package com.example.nice.coolweather;  //C:/Users/NICE/AndroidStudioProjects/CoolWeather
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.util.LogTime;
+import com.example.nice.coolweather.Service.AutoUpdateService;
 import com.example.nice.coolweather.gson.Forecast;
 import com.example.nice.coolweather.gson.Weather;
 import com.example.nice.coolweather.util.HttpUtil;
@@ -209,5 +211,7 @@ public class WeatherActivity extends AppCompatActivity {
         carWashText.setText(carWash);
         sportText.setText(sport);
         weatherLayout.setVisibility(View.VISIBLE);
+        Intent intent=new Intent(this, AutoUpdateService.class);
+        startService(intent);
     }
 }
